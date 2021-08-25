@@ -77,7 +77,6 @@ Then('ele não deverá ser adicionada à lista de passageiros', function () {
 Then('ele deverá ser adicionada à lista de passageiros', function () {
     let filter = carroca.passengers.filter(passenger => passenger.name === triedToComeAboard.name);
     let isAboard = filter.length > 0;
-
     assert.strictEqual(isAboard, true);
 });
 

@@ -17,6 +17,8 @@ Given('ele sempre começa a viagem saudável.', function () {
     viajante.isHealthy = true;
 });
 
+
+
 /** WHEN */
 
 When('o Traveler sair para caçar {int} vezes', function (int) {

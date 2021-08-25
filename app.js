@@ -14,5 +14,5 @@ let viajanteDiana  = new Traveler();
 
 module.exports = {
     viajante,
-    carroca,
+    carroca
 }
