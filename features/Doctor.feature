@@ -1,4 +1,4 @@
-#language pt
+# language: pt
 
 Funcionalidade: Doctor
 
@@ -7,9 +7,9 @@ Eu devo curar os viajantes doentes
 Para que eles possam seguir a viagem saudável
 
     Contexto:
-    Dado um Doctor de nome "Fabinho"
+    Dado um Doctor de nome "Luiz"
     E o Doctor sempre começa a viagem com 1 refeição
-    E o Doctor sempre comaça a viagem saudável
+    E o Doctor sempre começa a viagem saudável
 
     Cenário: Encontrou um viajante doente
     Dado o viajante doente
@@ -18,5 +18,5 @@ Para que eles possam seguir a viagem saudável
 
     Cenário:  viajante saudável
     Dado o viajante saudável 
-    Quando o Doctor curar
+    Quando o Doctor curá-lo
     Então o viajante manterá sua saúde
