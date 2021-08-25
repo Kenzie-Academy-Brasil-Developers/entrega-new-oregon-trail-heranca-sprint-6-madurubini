@@ -1,10 +1,14 @@
 const Traveler  = require("./models/Traveler");
 const Wagon     = require("./models/Wagon");
 const Doctor  = require("./models/Doctor");
+const Hunter  = require("./models/Hunter");
+
 
 let viajante = new Traveler();
 let carroca = new Wagon();
 let doutor = new Doctor();
+let hunter = new Hunter();
+
 
 let viajanteSergio = new Traveler();
 let viajanteSimone = new Traveler();
