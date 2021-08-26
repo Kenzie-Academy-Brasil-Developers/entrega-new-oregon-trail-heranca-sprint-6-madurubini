@@ -24,7 +24,7 @@ Para continuar a viagem saudável
 
     Cenário: Comeu e ficou doente
     Quando o Hunter parar para comer 2 vezes
-    Então a quantidade de refeições for igual ou menor a 0
+    Então a quantidade de refeições for igual a 0
     E o Hunter ficará doente
 
     Cenário: Transferiu Comida a um viajante 
@@ -33,11 +33,12 @@ Para continuar a viagem saudável
     E a comida do Hunter for maior que 0
     Então o viajante ficará com 3 refeições
 
-    Cenário: Não Transferiu comida a um viajante
-    Dado um viajante com 1 refeições
-    Quando o Hunter tranferir 1 refeições
-    E a comida do Hunter for menor ou igual a 0
-    Então o Hunter não irá tranferir a comida
+    Cenário: Saiu para caçar, comeu e ficou saudável
+    Quando o Hunter sair para caçar 1 vezes
+    E o Hunter parar para comer 1 vezes
+    Então o Hunter ficará com 5 refeiçoes
+    E o Hunter não ficará doente
+
     
 
 

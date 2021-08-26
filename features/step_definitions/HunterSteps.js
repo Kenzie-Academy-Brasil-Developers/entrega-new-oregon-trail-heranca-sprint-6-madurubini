@@ -59,7 +59,7 @@ When('a comida do Hunter for menor ou igual a {int}', function (int) {
       assert.strictEqual(hunter.isHealthy, true);
 });    
 
-Then('a quantidade de refeições for igual ou menor a {int}', function (int) {
+Then('a quantidade de refeições for igual {int}', function (int) {
       assert.strictEqual(hunter.food, int);
 });
 
@@ -71,6 +71,11 @@ Then('o viajante ficará com {int} refeições', function (int) {
       assert.strictEqual(viajante.food, int);
 });
 
-Then('o Hunter não irá tranferir a comida', function () {
+
+Then('o Hunter ficará com {int} refeiçoes', function (int) {
       assert.strictEqual(hunter.food, int);
 });
+
+Then('a quantidade de refeições for igual a {int}', function (int) {
+      assert.strictEqual(hunter.food, int);
+ });

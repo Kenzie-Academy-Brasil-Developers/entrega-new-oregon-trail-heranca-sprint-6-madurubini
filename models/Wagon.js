@@ -1,36 +1,17 @@
 class Wagon {
     constructor(capacity){
-        this._capacity = capacity
-        this._travelers = []
+        this.capacity = capacity
+        this.travelers = []
     }
 
-    set capacity(value){
-        this._capacity = value;
+    getAvailableSeatCount (){
+        return this.capacity
     }
 
-    get capacity() {
-        return this._capacity;
-    }
+    join(traveler){
+       
 
-    set travelers(value){
-        this._travelers = value;
-    }
-
-    get travelers() {
-        return this._travelers;
-    }
-
-    getAvailableSeatCount(){
-        return this._capacity
-    }
-
-    join(traveler) {
-        if(this.travelers.length >= this._capacity){
-            this.capacity = 0
-            return `Carroça lotada`
-        }
-
-        if(this.travelers.length < this._capacity){
+        if(this.travelers.length < this.capacity){
             this.capacity--
             this.travelers.push(traveler)
             
@@ -39,20 +20,22 @@ class Wagon {
     }
 
     shouldQuarantine() {
-        if(!this.isHealthy){
-            return true
-        }
-        else {
-            return false
-        }
+        let quarentine = false
+        this.travelers.forEach(traveler => {
+            if(traveler.isHealthy === 'false'){
+                quarentine = true
+            }
+        })
+        return quarentine
     }
 
     totalFood() {
-        let allFood = 0
+        let total = 0
        for(let i = 0; i < this.travelers.length; i++){
-           allFood += this.travelers[i]._food           
+        total += this.travelers[i].food
        }
-       return(allFood)
+       return(total)
+
     }
 }
 
